@@ -1,0 +1,30 @@
+@mixin table($bg-color: #e2e2e2) {
+    border-collapse: collapse;
+    padding: $base-padding;
+    background-color: $bg-color;
+    
+    td, th {
+        border: $base-border-thickness solid;
+        
+        width: 20%;
+        text-align: center;
+        padding: 5px;
+    }    
+}
+
+.table {
+    @include table;
+}
+
+@each $key, $val in $colors {
+    .table-#{$key}{
+        @include table($val);
+    }
+    .table-striped {
+        tr:nth-child(odd){
+            background-color: $val;
+        }
+    }
+}
+
+

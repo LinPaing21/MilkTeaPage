@@ -1,0 +1,10 @@
+input {
+    height: 30px;
+}
+.form-control {
+    width: auto;  
+    border-radius: 10px;
+    &:hover {
+        box-shadow: 5px 5px rgba(89, 120, 153, 0.8);
+    }
+}

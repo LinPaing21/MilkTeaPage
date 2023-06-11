@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="/img/coffee_cup_hot_icon.ico" rel="icon">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Tea Survey Page</title>
+</head>
+<body>
+    <nav class="navbar-primary">
+        <div class="container text-white">
+            <h1 class="site-title">Tea we all love</h1>
+            <ul class="display-f">
+                <li class="ml-2 text-hover-info"><a href="index.html">Home</a></li>
+                <li class="ml-2 text-hover-info"><a href="about.html">About</a></li>
+                <li class="ml-2 text-hover-info"><a href="survey.html">Survey</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container mt-2 text-white bg-green-dark-3">
+        <h1>Coffee Survey</h1>
+        <aside>
+            <figure>
+                <img src="/img/milk-tea.jpg" alt="a milk-tea cup" width="200" height="225"/>
+            </figure>
+            <p style="font-family: 'Courier New', Courier, monospace; font-weight: light;">
+                <li style="text-align: left;"> Milk tea is simply milk with tea. Any kind of tea and any kind of milk together makes milk tea. That’s it!</li>
+                <li style="text-align: left;"> Combinations to make milk tea are endless but the most basic and common milk tea is black tea and milk</li>
+                <li style="text-align: left;"> It’s smooth, sweet, and creamy, just as milk tea should taste.</li>
+            </p>
+        </aside>
+        <form action="milk-tea-survey.php" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Your Name</label><br/>
+                <input type="text" class="form-control" name="name" id="name" size="40" required/><br/>
+                <label for="email">Email Address</label><br/>
+                <input type="email" class="form-control"  name="email" id="email" placeholder="Enter a valid email address" size="40" required/><br/>
+            </fieldset>
+            <fieldset>
+                <legend>Your Milk-Tea Preferences</legend>
+                <label for="grind">Have you ever mad your own milk-tea?</label><br/>
+                <input type="radio" name="grind" id="grind" value="yes"/>yes
+                <input type="radio" name="grind" id="grind" value="no"/>no
+                <br/></br>
+                Tell us your milk-tea preparation methods.<br/>
+                <textarea name="method" class="form-control"   id="method" cols="40" rows="6"></textarea>
+                <br/>
+                <label for="drink">How do you drink your milk-tea?</label><br/>
+                <input type="checkbox" name="drink" id="drink" value="sugar"/>with sugar
+                <input type="checkbox" name="drink" id="drink" value="cream"/>with cream
+                <br/><br/>
+                What is your favorite milk-tea?<br/>
+                <select name="fav" id="fav" class="text-secondary-dark-5 form-control" style="width: 200px; height: 30px;">
+                    <option value="">please select a tea</option>
+                    <option value="taiwan">Taiwan Bubble Tea</option>
+                    <option value="hongkong">Hong Kong Milk-Tea</option>
+                    <option value="thai">Thai Iced Tea</option>
+                    <option value="burma">Burma La-Phet-Yay</option>
+                    <option value="india">Indian Masala Chai</option>
+                </select><br/>
+            </fieldset>
+            <button type="submit" class="btn-complement-purple mt-2 mb-2 font-md">Submit</button>
+        </form>
+    </div>
+
+    <footer class="bg-gray-light-7 pt-2 pb-2 mt-5">
+        <div class="container row justify-center">
+            &#169;&#65039; copyright 2023 Marc
+        </div>
+    </footer>
+
+</body>
+</html>
